@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { FaCartShopping } from "react-icons/fa6";
 import Hero from "./Hero";
+import { NavLink } from "react-router-dom";
 
 
 const Navbar = () => {
@@ -13,13 +14,17 @@ const Navbar = () => {
             <nav className="bg-gradient-to-r from-blue-500 to-indigo-600 p-7 mx-auto shadow-lg fixed top-0 left-0 w-full z-50">
                 <div className="flex items-center justify-between lg:justify-between">
                     {/* Website Name */}
-                    <div className="text-white md:text-3xl max-sm:text-xl font-semibold">Gadget Heaven</div>
+                    <div className="text-white md:text-3xl max-sm:text-xl font-semibold">
+                        <NavLink to='/'>
+                        Gadget Heaven
+                        </NavLink>
+                    </div>
 
                     {/* Menu Toggle Button for small screen */}
                     <div className="lg:hidden flex items-center space-x-4">
                         {/* Shopping Cart Icon */}
                         <FaCartShopping className="p-2 text-white border rounded-full w-10 h-9" />
-                        
+
                         {/* Hamburger Icon for small screens */}
                         <button
                             onClick={() => setMenuOpen(!menuOpen)}
@@ -66,10 +71,7 @@ const Navbar = () => {
                 </div>
             </nav>
 
-            {/* Banner */}
-            <div className="mt-[92px]"> {/* Added margin-top to push content below navbar */}
-             <Hero></Hero>
-            </div>
+
         </div>
     );
 };

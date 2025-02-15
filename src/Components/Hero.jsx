@@ -8,9 +8,9 @@ const Hero = () => {
                 {/* Content (heading, description, button) */}
                 <div className="text-center mt-6">
                     <h1 className="text-4xl md:text-6xl font-extrabold leading-tight">
-                        Upgrade Your Tech Accessories with <br /> Gadget Heaven Accessories
+                        Upgrade Your Tech Accessorize with <br /> Gadget Heaven Accessories
                     </h1>
-                    <p className="mt-4 text-lg md:text-xl">
+                    <p className="mt-4 text-lg md:text-lg">
                         Explore the latest gadgets that will take your experience to the next level. From smart devices to <br /> the coolest accessories, we have it all!
                     </p>
                     <button className="mt-6 bg-white text-blue-600 p-4 rounded-full hover:bg-gray-200 transition duration-300">
@@ -19,7 +19,7 @@ const Hero = () => {
                 </div>
 
                 {/* Image, Positioned Below Content */}
-                <div className='w-full max-w-[800px] mx-auto mt-8'>
+                <div className='w-full max-w-[1100px] h-[130px]  mx-auto mt-8'>
                     <img
                         className='object-cover border-4 p-3  border-white rounded-2xl w-full h-[300px] md:h-[400px]'
                         src="https://i.ibb.co/vCvZ1mTx/banner.jpg"

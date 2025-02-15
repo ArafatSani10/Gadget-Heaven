@@ -1,0 +1,41 @@
+[
+    {
+
+      
+      "id": 1,
+      "category": "Laptops",
+      "content": "Details about laptops."
+    },
+    {
+      "id": 2,
+      "category": "SmartPhone",
+      "content": "Details about phones."
+    },
+    {
+      "id": 3,
+      "category": "MacBook",
+      "content": "Details about MacBooks."
+    },
+    {
+      "id": 4,
+      "category": "SmartPhone",
+      "content": "Details about iPhones."
+    },
+    {
+      "id": 5,
+      "category": "SmartWatch",
+      "content": "Details about smart watches."
+    },
+    {
+      "id": 6,
+      "category": "Accessories",
+      "content": "Details about accessories."
+    },
+    {
+      "id": 6,
+      "category": "All",
+      "content": "Details about All."
+    }
+   
+  ]
+  
