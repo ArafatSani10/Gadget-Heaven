@@ -5,6 +5,7 @@ import Home from "../Pages/Home";
 import NotFoundPage from "../Pages/NotFoundpage";
 import CategoryCard from "../Components/CategoryCard";
 import CategoryDetails from "../Components/CategoryDetails";
+import Chart from "../Pages/Chart";
 
 const routes = createBrowserRouter([
     {
@@ -44,6 +45,11 @@ const routes = createBrowserRouter([
                 element: <CategoryDetails></CategoryDetails>,
                 loader: () => fetch('../Product.json'),
                 
+            },
+
+            {
+                path:'/Statistics',
+                element:<Chart></Chart>
             },
 
            

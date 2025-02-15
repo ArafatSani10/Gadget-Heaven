@@ -87,16 +87,15 @@ const Navbar = () => {
     // Use location hook to get current path
     const location = useLocation();
 
-    // Conditionally set the background and text color based on the current route
+
     const isDetailsPage = location.pathname.includes("/details");
 
     return (
         <div>
             {/* Navbar */}
             <nav
-                className={`${
-                    isDetailsPage ? "bg-white text-black" : "bg-gradient-to-r from-blue-500 to-indigo-600 text-white"
-                } p-7 mx-auto shadow-lg fixed top-0 left-0 w-full z-50 transition-all duration-300`}
+                className={`${isDetailsPage ? "bg-white text-black" : "bg-gradient-to-r from-blue-500 to-indigo-600 text-white"
+                    } p-7 mx-auto shadow-lg fixed top-0 left-0 w-full z-50 transition-all duration-300`}
             >
                 <div className="flex items-center justify-between lg:justify-between">
                     {/* Website Name */}
@@ -119,8 +118,12 @@ const Navbar = () => {
                     {/* Navbar Links for large screens */}
                     <div className="hidden lg:flex items-center justify-center flex-1 mr-28 space-x-10">
                         <ul className="flex gap-16">
-                            <li className={`transition duration-300 ${isDetailsPage ? "text-black hover:text-blue-500" : "text-white hover:text-blue-500"} font-bold text-xl`}>Home</li>
-                            <li className={`transition duration-300 ${isDetailsPage ? "text-black hover:text-blue-500" : "text-white hover:text-blue-500"} font-bold text-xl`}>Statistics</li>
+                            <NavLink to='/'>
+                                <li className={`transition duration-300 ${isDetailsPage ? "text-black hover:text-blue-500" : "text-white hover:text-blue-500"} font-bold text-xl`}>Home</li>
+                            </NavLink>
+                            <NavLink to='/Statistics'>
+                                <li className={`transition duration-300 ${isDetailsPage ? "text-black hover:text-blue-500" : "text-white hover:text-blue-500"} font-bold text-xl`}>Statistics</li>
+                            </NavLink>
                             <li className={`transition duration-300 ${isDetailsPage ? "text-black hover:text-blue-500" : "text-white hover:text-blue-500"} font-bold text-xl`}>Dashboard</li>
                         </ul>
                     </div>
@@ -146,8 +149,13 @@ const Navbar = () => {
                         </button>
                     </div>
                     <ul className="flex flex-col items-center space-y-6 mb-24">
-                        <li className={`transition duration-300 ${isDetailsPage ? "text-black" : "text-white"}`}>Home</li>
-                        <li className={`transition duration-300 ${isDetailsPage ? "text-black" : "text-white"}`}>Statistics</li>
+                        <NavLink to='/'>
+                            <li className={`transition duration-300 ${isDetailsPage ? "text-black" : "text-white"}`}>Home</li>
+                        </NavLink>
+
+                        <NavLink to='/Statistics'>
+                            <li className={`transition duration-300 ${isDetailsPage ? "text-black" : "text-white"}`}>Statistics</li>
+                        </NavLink>
                         <li className={`transition duration-300 ${isDetailsPage ? "text-black" : "text-white"}`}>Dashboard</li>
                     </ul>
                 </div>
