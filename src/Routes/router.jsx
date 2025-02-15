@@ -4,6 +4,7 @@ import MainLayout from "../Layouts/MainLayout";
 import Home from "../Pages/Home";
 import NotFoundPage from "../Pages/NotFoundpage";
 import CategoryCard from "../Components/CategoryCard";
+import CategoryDetails from "../Components/CategoryDetails";
 
 const routes = createBrowserRouter([
     {
@@ -27,10 +28,29 @@ const routes = createBrowserRouter([
                         element: <CategoryCard></CategoryCard>,
                         loader: () => fetch('../Product.json'),
                     },
+
+                    
+                    
+                    
+
                 ],
 
 
+
+
             },
+            {
+                path: '/details/:id',
+                element: <CategoryDetails></CategoryDetails>,
+                loader: () => fetch('../Product.json'),
+                
+            },
+
+           
+          
+            
+
+
 
 
         ]
@@ -39,3 +59,5 @@ const routes = createBrowserRouter([
 ])
 
 export default routes;
+
+

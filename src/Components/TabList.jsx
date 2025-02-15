@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, Outlet, useLocation } from 'react-router-dom';
 
 const TabList = ({ tablist }) => {
-    const location = useLocation();  
+    const location = useLocation();
 
     return (
         <div className="flex md:w-[1200px] p-6 mt-12 max-sm:flex-col mx-auto md:justify-between md:space-x-10">

@@ -1,7 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Card = ({ product }) => {
-    const { product_title, product_image, category, price, description } = product;
+    const { id, product_id, product_title, product_image, category, price, description } = product;
 
     return (
         <div className="w-full max-sm:w-full mx-auto my-5 p-4 flex flex-col justify-between bg-white border-2 border-gray-300 shadow-lg rounded-lg transition-all duration-300 hover:shadow-xl">
@@ -23,14 +24,19 @@ const Card = ({ product }) => {
                 <h3 className="text-lg max-sm:text-xl font-semibold text-gray-500 mb-4">{price} USD</h3>
 
                 {/* View Details Button */}
-                <button className="px-4 border-2 hover:text-white  py-3 text-black  hover:bg-blue-600 rounded-full transition-colors duration-200">
-                    View Details
-                </button>
+                <Link to={`/details/${product_id}`}>
+                    <button className="px-4 border-2 hover:text-white  py-3 text-black  hover:bg-blue-600 rounded-full transition-colors duration-200">
+                        View Details
+                    </button>
+                </Link>
             </div>
         </div>
 
-      
+
     );
 };
 
 export default Card;
+
+
+
