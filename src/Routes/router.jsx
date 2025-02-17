@@ -6,6 +6,7 @@ import NotFoundPage from "../Pages/NotFoundpage";
 import CategoryCard from "../Components/CategoryCard";
 import CategoryDetails from "../Components/CategoryDetails";
 import Chart from "../Pages/Chart";
+import Dashboard from "../Pages/Dashboard";
 
 const routes = createBrowserRouter([
     {
@@ -29,36 +30,24 @@ const routes = createBrowserRouter([
                         element: <CategoryCard></CategoryCard>,
                         loader: () => fetch('../Product.json'),
                     },
-
-                    
-                    
-                    
-
                 ],
-
-
-
-
             },
             {
                 path: '/details/:id',
                 element: <CategoryDetails></CategoryDetails>,
                 loader: () => fetch('../Product.json'),
-                
+
             },
 
             {
-                path:'/Statistics',
-                element:<Chart></Chart>
+                path: '/Statistics',
+                element: <Chart></Chart>
             },
 
-           
-          
-            
-
-
-
-
+            {
+                path: '/dashboard',
+                element: <Dashboard></Dashboard>
+            },
         ]
 
     }

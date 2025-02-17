@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FaCartShopping, FaStar, FaRegStar } from 'react-icons/fa6'; // Importing the star icons
-import { useLoaderData, useParams } from 'react-router-dom';
+import { useLoaderData, useNavigate, useParams } from 'react-router-dom';
+import { addToCart, getAllCart } from '../Utils';
 
 const CategoryDetails = () => {
     const { id } = useParams();
     const data = useLoaderData();
+
     const filterData = data?.filter(item => item.product_id === id);
+    
     if (!filterData || filterData.length === 0) {
         return <p>No product found with the provided ID.</p>;
     }
@@ -13,11 +16,21 @@ const CategoryDetails = () => {
     const fullStars = Math.floor(product.rating);
     const halfStar = product.rating % 1 !== 0;
     const emptyStars = 5 - fullStars - (halfStar ? 1 : 0);
+    const navigate = useNavigate();
+   
+
+    // handleCart btn click 
+    const handleCart=(product)=>{
+        console.log(product)
+        addToCart(product)
+     
+    }
+  
 
     return (
         <div>
             {/* Headline above the product card, with updated position */}
-            <div className='mt-24 p-6 mb-6 h-[400px] text-center bg-blue-500 rounded-xl'>
+            <div className='mt-24 p-6 mb-6 h-[200px] text-center bg-blue-500 rounded-xl'>
                 <h1 className="text-4xl font-semibold text-white">Product Details</h1>
                 <p className="text-lg md:w-[800px] mx-auto text-white mt-2">Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!</p>
             </div>
@@ -76,7 +89,7 @@ const CategoryDetails = () => {
 
                     {/* Add to Cart Button */}
                     <div className="add-to-cart-btn border p-4 w-[180px] rounded-full bg-blue-500 hover:bg-blue-600 text-white flex items-center justify-center gap-2 mt-2">
-                        <button className="font-bold">Add to Cart</button>
+                        <button  onClick={()=>handleCart(product)} className="font-bold">Add to Cart</button>
                         <FaCartShopping size={20} />
                     </div>
                 </div>

@@ -15,21 +15,13 @@ const Home = () => {
                     Home || Gadget Heaven
                 </title>
             </Helmet>
-         
-
             {/* Banner */}
             <div>
                 <Hero></Hero>
             </div>
-
-
-          
-
-
             <div className='mt-52'>
                 <TabList tablist={tablist}></TabList>
             </div>
- 
         </div>
     );
 };
