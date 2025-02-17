@@ -88,7 +88,7 @@
       "product_title": "Apple-iPhone-X",
       "product_image": "https://i5.walmartimages.com/seo/Apple-iPhone-X-256GB-5-8-4G-LTE-CDMA-nbsp-Unlocked-nbsp-Space-Gray-nbsp-Scratch-And-Dent-Used_ed0fdfb9-1453-43b6-8750-fdf692b2557e.a1edc202c9b5562a64cfc659881ee2b1.jpeg",
       "category": {
-        "name": "SmartPhone",
+        "name": "Iphone",
         "id": "CAT002"
       },
       "price": 799.99,
@@ -102,7 +102,7 @@
       "product_title": "iPhone 16 Pro Max",
       "product_image": "https://adminapi.applegadgetsbd.com/storage/media/large/iPhone-16-Pro-Max---16-Pro-Desert-Titanium-1929.jpg",
       "category": {
-        "name": "SmartPhone",
+        "name": "Iphone",
         "id": "CAT002"
       },
       "price": 899.99,

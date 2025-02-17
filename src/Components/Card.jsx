@@ -42,7 +42,7 @@ const Card = ({ product, handleRemove }) => {
                 <button
                     onClick={() => handleRemove(product_id)}
                     className="absolute top-0 right-0 bg-red-500 text-white p-2 rounded-full hover:bg-red-600 transition-colors duration-200 flex items-center justify-center"
-                    style={{ marginTop: '-10px', marginRight: '-10px' }} 
+                    style={{ marginTop: '-12px', marginRight: '-10px' }} 
                 >
                     <FaTrashAlt size={20} />
                 </button>

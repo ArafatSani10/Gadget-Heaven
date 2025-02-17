@@ -6,11 +6,7 @@
       "category": "Laptops",
       "content": "Details about laptops."
     },
-    {
-      "id": 2,
-      "category": "SmartPhone",
-      "content": "Details about phones."
-    },
+  
     {
       "id": 3,
       "category": "MacBook",
@@ -18,7 +14,7 @@
     },
     {
       "id": 4,
-      "category": "SmartPhone",
+      "category": "Iphone",
       "content": "Details about iPhones."
     },
     {
