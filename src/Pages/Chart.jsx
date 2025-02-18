@@ -8,15 +8,14 @@ ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend)
 const Chart = () => {
     const [data, setData] = useState([]);
 
-    // Fetch product data once on component mount
     useEffect(() => {
         fetch('/Product.json')
             .then((response) => response.json())
             .then((jsonData) => setData(jsonData))
             .catch((error) => console.error("Error loading the data", error));
-    }, []); // Empty dependency array ensures this only runs once
+    }, []); 
 
-    // Define chart data
+ 
     const chartData = {
         labels: data.map((product) => product.product_title),
         datasets: [
@@ -30,10 +29,10 @@ const Chart = () => {
         ],
     };
 
-    // Define chart options
+ 
     const options = {
         responsive: true,
-        maintainAspectRatio: false, // Disable aspect ratio
+        maintainAspectRatio: false, 
         plugins: {
             title: {
                 display: true,
@@ -43,7 +42,7 @@ const Chart = () => {
         scales: {
             x: {
                 ticks: {
-                    maxRotation: 90, // Rotate labels if needed
+                    maxRotation: 90,
                     minRotation: 45,
                 },
             },

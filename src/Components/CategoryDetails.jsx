@@ -30,13 +30,13 @@ const CategoryDetails = () => {
     return (
         <div>
             {/* Headline above the product card, with updated position */}
-            <div className='mt-24 p-6 mb-6 h-[200px] text-center bg-blue-500 rounded-xl'>
+            <div className='mt-24 p-6 mb-6 h-[400px] text-center bg-blue-500 rounded-xl'>
                 <h1 className="text-4xl font-semibold text-white">Product Details</h1>
                 <p className="text-lg md:w-[800px] mx-auto text-white mt-2">Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!</p>
             </div>
 
             {/* Product Card Section */}
-            <div className="w-full max-w-screen-xl mx-auto p-6 mt-6 -mt-56 bg-white border-2 shadow-lg rounded-xl flex flex-col lg:flex-row justify-center items-start">
+            <div className="w-full max-w-screen-xl mx-auto p-6 mt-6 -mt-48 bg-white border-2 shadow-lg rounded-xl flex flex-col lg:flex-row justify-center items-start">
                 {/* Product Image with Hover Effect */}
                 <div className="relative border-2 p-5 w-[500px] h-[500px] max-sm:w-auto max-sm:h-auto bg-gray-200 rounded-lg overflow-hidden mb-6 lg:mb-0">
                     <img

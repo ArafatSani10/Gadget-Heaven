@@ -6,15 +6,12 @@ import { NavLink, useLocation } from "react-router-dom";
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
 
-    // Use location hook to get current path
+ 
     const location = useLocation();
-
-    // Check if the current page is any of the three (details, statistics, or dashboard)
     const isDetailsPage = location.pathname.includes("/details");
     const isStatisticsPage = location.pathname.includes("/Statistics");
     const isDashboardPage = location.pathname.includes("/dashboard");
 
-    // Determine the background color based on the current page
     const backgroundClass = isDetailsPage || isStatisticsPage || isDashboardPage ? "bg-white text-black" : "bg-gradient-to-r from-blue-500 to-indigo-600 text-white";
 
     return (
